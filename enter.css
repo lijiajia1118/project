@@ -1,0 +1,51 @@
+* {
+     margin: 0;
+     padding: 0;
+    }
+body{
+	background-image: url("bj-img/1.jpg");
+	background-size: 100% 100%;
+	background-repeat : no-repeat;
+	background-attachment: fixed;
+}
+.container{
+	height:100%;
+}
+.login-wrapper{
+	background-color:#8E898D;
+	opacity: 0.7;
+	width: 440px;
+	height: 500px;
+	border-radius: 15px;
+	padding: 0.50px;
+	position: relative;
+	margin-top: 440px;
+	margin-left: 50%;
+	transform: translate(-50%,-50%);
+}
+.header {
+    font-size: 38px;
+    font-weight: bold;
+	font-family: Showcard Gothic;
+    text-align: center;
+    line-height: 150px;
+}
+.form-wrapper{
+	font-size: 25px;
+	text-align: center;
+	font-weight: bold;
+   	margin-bottom: 20px;
+	font-family: 方正姚体;
+	margin: 0 auto;
+   	padding: 10px;
+ }
+input{
+	height: 25px;
+	width: 250px;
+}
+button{
+	margin-top: 40px;
+	width: 80px;
+	height:40px;
+	font-family: Showcard Gothic;
+}

@@ -1,0 +1,67 @@
+body{
+	background-image:url("bj-img/2.jpg");
+	background-size: 100% 100%;
+	background-repeat : no-repeat;
+	background-attachment: fixed;
+}
+
+h1{
+	text-align: center;
+	font-size: 4em;
+	font-family: Algerian;
+	color:#000000;
+}
+p{
+	text-align: center;
+	font-size: 1.5em;
+	font-family: 方正姚体;
+	font-weight:bolder;
+	color:black;
+}
+main{
+	margin-top: 30px;
+}
+h2{
+	text-align: center;
+	font-size: 2em;
+	font-family: 方正姚体;
+	color:white;
+}
+h3{
+	text-align: center;
+	font-size: 1.5em;
+	font-family: 方正姚体;
+	color:aliceblue;
+}
+.meet{
+    margin: 0 auto;
+	width: 400px;
+	background:#8C401E;
+	opacity: 0.6;
+	padding:20px;
+	border-radius: 25px;
+}
+h4{
+	text-align: center;
+	font-size: 1.5em;
+	font-family: 方正姚体;
+	color:white;
+}
+p1{
+	text-align: center;
+	font-size: 2em;
+	font-family: monospace;
+	color: #000000;
+}
+a:link{
+	color:aliceblue;
+	text-decoration: none;
+}
+a:visited{
+	color:#DBD2D1;
+}
+a:hover{
+	color: cadetblue;
+	font-size:40px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}

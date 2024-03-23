@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>second-story</title>
+	<link href="second.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<header>
+	<h1>《在我们的时代》</h1>
+	</header>
+	<main>
+		<div class="story">
+			<h2>苏芙比|Sotheby</h2>
+			<p>"你好！我是苏芙比，如你所见是一个优秀而博学的淑女！<br>话说回来，刚刚那个农夫居然拥有一整群双角兽啊！”<br>在浓厚神秘学氛围中长大的苏芙比常常难以分辨那些普通动物与现代文明的产物：<br>双角圣兽、自动小岛、巨龙吐息烛台……请不要惊慌，实际上，他们只是普通的山羊、轮船与煤气灯。</p>
+			<h2>入战定位</h2>
+			<p>苏芙比是一位木系输出角色<br>她的神秘术能为己方全体添加一定回合的【愈合】状态，并对敌方附加【中毒】状态；至终的仪式能对敌方全体造成现实创伤，并立即结算当前场上所有【中毒】和【愈合】状态。</p>
+		</div>
+		 <div class="slideshow-container">
+			<img class="slide-image" src="story-img/2.1.jpg" alt="Image 1">
+			<img class="slide-image" src="story-img/2.2.jpg" alt="Image 2">
+			<img class="slide-image" src="story-img/2.3.jpg" alt="Image 3">
+			<img class="slide-image" src="story-img/2.4.jpg" alt="Image 4">
+			<img class="slide-image" src="story-img/2.5.jpg" alt="Image 5">
+			<div class="slide-caption">Image 3</div>
+		</div>
+	</main> 
+	<footer>
+		<div class="story-end">
+			<div class="story-end">
+				<story-image></story-image>
+				<story-back><a href="personal.html">返回</a></story-back>
+			</div>
+		</div>
+	</footer>
+	<script>
+        // 获取轮播图容器和所有图片
+        var slideshowContainer = document.querySelector('.slideshow-container');
+        var slideImages = document.querySelectorAll('.slide-image');
+
+        // 设置当前显示图片的索引
+        var currentSlideIndex = 0;
+
+        // 显示第一张图片
+        showSlide(currentSlideIndex);
+
+        // 自动播放轮播图
+        setInterval(function() {
+            // 切换到下一张图片
+            currentSlideIndex++;
+            if (currentSlideIndex >= slideImages.length) {
+                currentSlideIndex = 0;
+            }
+
+            // 显示下一张图片
+            showSlide(currentSlideIndex);
+        }, 3000);
+
+        // 显示指定索引的图片
+        function showSlide(index) {
+            // 隐藏所有图片
+            for (var i = 0; i < slideImages.length; i++) {
+                slideImages[i].style.display = 'none';
+            }
+
+            // 显示指定索引的图片
+            slideImages[index].style.display = 'block';
+
+            // 更新图片标题
+            var imageAlt = slideImages[index].getAttribute('alt');
+            var caption = document.querySelector('.slide-caption');
+            caption.textContent = imageAlt;
+        }
+    </script>
+</body>
+</html>

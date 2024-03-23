@@ -1,0 +1,101 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: url("bj-img/5.jpg");	
+	background-size: 100% 100%;
+	background-repeat : no-repeat;
+	background-attachment: fixed;
+}
+h1{
+	text-align: center;
+	font-size: 2.5em;
+	font-family: 方正姚体;
+	color:white;
+}
+.story{
+	margin-top: 50px;
+	float: left;
+	width: 690px;
+	text-align: center;
+	margin-left: 50px;
+}
+.story h2{
+	text-align: right;
+	font-size: 2em;
+	font-family: 方正姚体;
+	color:white;
+}
+.story p{
+	font-size: 1.5em;
+	color: white;
+	font-family: 华文中宋;
+	border: 5px double white;
+}
+/* 轮播图容器样式 */
+.slideshow-container {	
+	margin-top: 30px;
+	width: 750px;
+	height: 500px;
+	position:absolute;
+	overflow: hidden;
+	left: 800px;
+}
+/* 图片样式 */
+.slide-image {
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+
+/* 图片标题样式 */
+.slide-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	padding: 10px;
+	font-size: 18px;
+	text-align: center;
+}
+.story-end{
+	margin-top: 600px;
+	height:280px;
+}
+.story-end story-image{
+	float: left;
+	background-image: url("story-img/1.6.jpg");
+	width: 820px;
+	height: 200px;
+	margin-top: 50px;
+	margin-left: 400px;
+	opacity: 0.9;
+}
+.story-end story-back{
+	float: left;
+	margin-left: 50px;
+	margin-top: 100px;
+	width: 100px;
+	height: 100px;
+	background-image: url("bj-img/back.png");
+	background-size: cover;
+	font-family: 方正姚体;
+	font-size: 1.5em;
+	text-align: center;
+	line-height: 100px;
+}
+a:link{
+	color:#7F6364;
+	text-decoration: none;
+}
+a:visited{
+	color:white;
+}
+a:hover{
+	color: cadetblue;
+	font-size:40px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}

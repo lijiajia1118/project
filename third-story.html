@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>third-story</title>
+<link href="third.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<header>
+	<h1>《夜色温柔》</h1>
+	</header>
+	<main>
+		<div class="story">
+			<h2>槲寄生|Druvis|111</h2>
+			<p>"礼服与高跟鞋不会阻挡我的步伐，我能在林间跳跃，<br>因为我曾无数次这么做过”<br>从一群人中往另一群人中去，从一艘船上向另一艘船上去——<br>她是来自林与藤之地的古老血承者；是追逐“美国梦”的林业大亨之女；是熄灭火场却无法挽回一切的女巫。<br>而如今，冰雪消融，焰火熄去，焦土中的枯枝正在酝酿新生的气息。<br>“报仇只是沉溺在过去之人的自我抚慰，而我选择了走向明日。”</p>
+			<h2>入战定位</h2>
+			<p>槲寄生是一位木系输出角色<br>她的神秘术能对敌方造成精神创伤，且能使敌方陷入【石化】状态，限制其行动；至终的仪式能对敌方全体造成精神创伤，同时使攻击的主目标陷入【石化】状态。</p>
+		</div>
+		 <div class="slideshow-container">
+			<img class="slide-image" src="story-img/3.1.jpg" alt="Image 1">
+			<img class="slide-image" src="story-img/3.2.jpg" alt="Image 2">
+			<img class="slide-image" src="story-img/3.3.jpg" alt="Image 3">
+			<img class="slide-image" src="story-img/3.4.jpg" alt="Image 4">
+			<img class="slide-image" src="story-img/3.5.jpg" alt="Image 5">
+			<div class="slide-caption">Image 3</div>
+		</div>
+	</main> 
+	<footer>
+			<div class="story-end">
+				<story-image></story-image>
+				<story-back><a href="personal.html">返回</a></story-back>
+			</div>
+	</footer>
+	<script>
+        // 获取轮播图容器和所有图片
+        var slideshowContainer = document.querySelector('.slideshow-container');
+        var slideImages = document.querySelectorAll('.slide-image');
+
+        // 设置当前显示图片的索引
+        var currentSlideIndex = 0;
+
+        // 显示第一张图片
+        showSlide(currentSlideIndex);
+
+        // 自动播放轮播图
+        setInterval(function() {
+            // 切换到下一张图片
+            currentSlideIndex++;
+            if (currentSlideIndex >= slideImages.length) {
+                currentSlideIndex = 0;
+            }
+
+            // 显示下一张图片
+            showSlide(currentSlideIndex);
+        }, 3000);
+
+        // 显示指定索引的图片
+        function showSlide(index) {
+            // 隐藏所有图片
+            for (var i = 0; i < slideImages.length; i++) {
+                slideImages[i].style.display = 'none';
+            }
+
+            // 显示指定索引的图片
+            slideImages[index].style.display = 'block';
+
+            // 更新图片标题
+            var imageAlt = slideImages[index].getAttribute('alt');
+            var caption = document.querySelector('.slide-caption');
+            caption.textContent = imageAlt;
+        }
+    </script>
+</body>
+</html>

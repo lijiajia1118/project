@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>forth-story</title>
+<link href="forth.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<header>
+	<h1>《干杯，朋友》</h1>
+	</header>
+	<main>
+		<div class="story">
+			<h2>红弩箭|Lilya</h2>
+			<p>"我喜欢在高空以最快速度飞行的感觉，我能像刀子一样劈开空气，<br>所有一切都无法追上我，只能遥望我红色的残影。“<br>每一位驾驶Su-01的飞行学员均经过了芝诺军备学院的系统性训练——除了红弩箭。仅依靠天赋和好胜心，她早早地便爬上了飞行中队副队长的位置。<br>也多亏了她，学院修订了更为详尽的《飞行员守则》：禁止携带瓶装液体、禁止在低空高频翻转……遗憾的是，该手册因与使用者的飞行理念不合，很快便被它的主人恶意遗弃在了市郊的垃圾桶里。</p>
+			<h2>入战定位</h2>
+			<p>红弩箭是一位星系输出角色<br>她的神秘术能对敌方造成现实创伤，并在暴击时追加一定量的现实创伤；至终的仪式能对敌方单体造成现实创伤，并在暴击时根据本次伤害回复一定比例的血量。</p>
+		</div>
+		 <div class="slideshow-container">
+			<img class="slide-image" src="story-img/4.1.jpg" alt="Image 1">
+			<img class="slide-image" src="story-img/4.2.jpg" alt="Image 2">
+			<img class="slide-image" src="story-img/4.3.jpg" alt="Image 3">
+			<img class="slide-image" src="story-img/4.4.jpg" alt="Image 4">
+			<img class="slide-image" src="story-img/4.5.jpg" alt="Image 5">
+			<div class="slide-caption">Image 3</div>
+		</div>
+	</main> 
+	<footer>
+			<div class="story-end">
+				<story-image></story-image>
+				<story-back><a href="personal.html">返回</a></story-back>
+			</div>
+	</footer>
+	<script>
+        // 获取轮播图容器和所有图片
+        var slideshowContainer = document.querySelector('.slideshow-container');
+        var slideImages = document.querySelectorAll('.slide-image');
+
+        // 设置当前显示图片的索引
+        var currentSlideIndex = 0;
+
+        // 显示第一张图片
+        showSlide(currentSlideIndex);
+
+        // 自动播放轮播图
+        setInterval(function() {
+            // 切换到下一张图片
+            currentSlideIndex++;
+            if (currentSlideIndex >= slideImages.length) {
+                currentSlideIndex = 0;
+            }
+
+            // 显示下一张图片
+            showSlide(currentSlideIndex);
+        }, 3000);
+
+        // 显示指定索引的图片
+        function showSlide(index) {
+            // 隐藏所有图片
+            for (var i = 0; i < slideImages.length; i++) {
+                slideImages[i].style.display = 'none';
+            }
+
+            // 显示指定索引的图片
+            slideImages[index].style.display = 'block';
+
+            // 更新图片标题
+            var imageAlt = slideImages[index].getAttribute('alt');
+            var caption = document.querySelector('.slide-caption');
+            caption.textContent = imageAlt;
+        }
+    </script>
+</body>
+</html>
